@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Acceso al panel · Grupo VO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+  body { background: var(--gris-100); min-height: 100vh; display:flex; align-items:center; justify-content:center; padding:20px; }
+  .caja-login { max-width: 380px; width:100%; }
+  .caja-login .logo { justify-content:center; display:flex; margin-bottom:20px; font-size:1.3rem; }
+</style>
+</head>
+<body>
+  <div class="caja-login">
+    <a href="index.html" class="logo">GRUPO <span>VO</span></a>
+    <form class="form-agenda" id="form-login">
+      <h3>Panel de recepción</h3>
+      <p class="sub">Acceso interno · Grupo VO</p>
+      <div class="form-error" id="login-error"></div>
+      <div class="campo">
+        <label for="login-email">Correo</label>
+        <input id="login-email" type="email" required autocomplete="username" />
+      </div>
+      <div class="campo">
+        <label for="login-password">Contraseña</label>
+        <input id="login-password" type="password" required autocomplete="current-password" />
+      </div>
+      <button type="submit" class="btn btn-primario btn-bloque">Entrar</button>
+    </form>
+  </div>
+
+  <script src="assets/js/supabase.js"></script>
+  <script src="assets/js/login.js"></script>
+</body>
+</html>

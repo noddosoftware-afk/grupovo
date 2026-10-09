@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Panel de citas · Grupo VO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+  body { background: var(--gris-100); }
+  .admin-header {
+    background: var(--blanco); border-bottom: 1px solid var(--gris-200);
+    padding: 16px 0; margin-bottom: 28px;
+  }
+  .admin-header .contenedor { display:flex; align-items:center; justify-content:space-between; }
+  .admin-wrap { padding-bottom: 60px; }
+  .tabla-solicitudes { width:100%; border-collapse: collapse; background:var(--blanco); border-radius: var(--radio); overflow:hidden; box-shadow: var(--sombra); }
+  .tabla-solicitudes th, .tabla-solicitudes td { padding: 12px 14px; text-align:left; font-size:0.88rem; border-bottom:1px solid var(--gris-200); }
+  .tabla-solicitudes th { background: var(--azul-900); color:#fff; font-weight:700; }
+  .tabla-solicitudes tr:last-child td { border-bottom:none; }
+  .etiqueta { display:inline-block; padding:4px 10px; border-radius:999px; font-size:0.76rem; font-weight:700; }
+  .etiqueta.nuevo { background:#fdecec; color:#b3261e; }
+  .etiqueta.contactado { background:#fff6e0; color:#9a6b00; }
+  .etiqueta.agendado { background:#e8f8f1; color:#0a7a52; }
+  .etiqueta.cancelado { background:var(--gris-200); color:var(--gris-700); }
+  select.estado-select { padding:6px 8px; border-radius:8px; border:1.5px solid var(--gris-200); font-family:var(--fuente); font-size:0.82rem; }
+  .vacio { text-align:center; padding:60px 20px; color:var(--gris-400); }
+  .tabla-scroll { overflow-x:auto; }
+</style>
+</head>
+<body>
+
+<header class="admin-header">
+  <div class="contenedor">
+    <a href="index.html" class="logo">GRUPO <span>VO</span> · Panel</a>
+    <button class="btn btn-fantasma" id="btn-salir">Cerrar sesión</button>
+  </div>
+</header>
+
+<main class="contenedor admin-wrap">
+  <div class="titulo-seccion" style="text-align:left; margin-bottom:28px;">
+    <h2 style="margin-bottom:6px;">Solicitudes de cita</h2>
+    <p>Gestiona las solicitudes que llegan desde el sitio web. Actualiza el estado conforme las confirmes.</p>
+  </div>
+
+  <div id="contenido-tabla">
+    <p class="vacio">Cargando...</p>
+  </div>
+</main>
+
+<script src="assets/js/supabase.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
