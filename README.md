@@ -19,7 +19,7 @@ Proyecto Supabase **`grupovo-prod`** (org Noddo Software, id `jwpaspahholqczgqxc
 ## Pendiente / próximos pasos
 
 - **Integración con el sistema de gestión de pacientes que ya usa Grupo VO** (altas, procedimientos, pagos): por ahora el agendador vive en paralelo (base de datos propia + notificación a recepción). Falta identificar el software exacto que usan y si tiene API/exportación para conectar de verdad las citas confirmadas a su sistema. No bloquea el lanzamiento del sitio.
-- Confirmar con el cliente: equipo médico/doctores a mostrar, fotos reales de la clínica (hoy no hay imágenes reales, solo diseño visual con iconos), testimonios reales de pacientes (no se incluyeron testimonios inventados).
+- Confirmar con el cliente: equipo médico/doctores a mostrar, testimonios reales de pacientes (no se incluyeron testimonios inventados). Las fotos actuales (`assets/img/`) son **stock genérico de Unsplash** (temática oftalmología/clínica, sin marcas ni personas identificables) usadas solo como placeholder visual — reemplazar por fotos reales de la clínica en cuanto el cliente las proporcione.
 - Una vez confirmado el dominio real, actualizar metadatos OG y considerar agregar `sitemap.xml`.
 
 ## Deploy
