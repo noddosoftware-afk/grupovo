@@ -33,6 +33,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const exito = document.getElementById("form-exito");
   const error = document.getElementById("form-error");
 
+  // Botón "Agendar por WhatsApp": arma el mensaje con lo que el usuario ya
+  // haya escrito en el formulario, sin obligarlo a repetirlo.
+  const btnWa = document.getElementById("btn-agenda-whatsapp");
+  if (form && btnWa) {
+    const actualizarWa = () => {
+      const nombre = form.nombre.value.trim();
+      const servicio = form.servicio.value;
+      const fecha = form.fecha.value;
+      const horario = form.horario.value;
+      const lineas = ["Hola, quiero agendar una cita en Grupo VO."];
+      if (nombre) lineas.push(`Nombre: ${nombre}`);
+      if (servicio) lineas.push(`Procedimiento de interés: ${servicio}`);
+      if (fecha) lineas.push(`Fecha preferida: ${fecha}`);
+      if (horario) lineas.push(`Horario preferido: ${horario}`);
+      btnWa.href = "https://wa.me/5214774038972?text=" + encodeURIComponent(lineas.join("\n"));
+    };
+    actualizarWa();
+    form.addEventListener("input", actualizarWa);
+  }
+
   if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
