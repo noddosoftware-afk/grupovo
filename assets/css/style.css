@@ -16,6 +16,7 @@
   --radio: 14px;
   --sombra: 0 10px 30px -10px rgba(11, 46, 79, 0.25);
   --fuente: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --fuente-serif: "Fraunces", Georgia, "Times New Roman", serif;
 }
 
 * { box-sizing: border-box; }
@@ -162,11 +163,12 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero h1 {
+  font-family: var(--fuente-serif);
   font-size: clamp(2.1rem, 4vw, 3.2rem);
   line-height: 1.12;
   margin: 0 0 18px;
   color: var(--azul-900);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -305,10 +307,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 .titulo-seccion h2 {
+  font-family: var(--fuente-serif);
   font-size: clamp(1.7rem, 3vw, 2.3rem);
   color: var(--azul-900);
   margin: 0 0 14px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .titulo-seccion p {
@@ -482,7 +485,7 @@ a { color: inherit; text-decoration: none; }
   box-shadow: var(--sombra);
 }
 
-.cta-agenda h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0 0 14px; font-weight: 800; }
+.cta-agenda h2 { font-family: var(--fuente-serif); font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0 0 14px; font-weight: 600; }
 .cta-agenda p { color: #d9ecf3; line-height: 1.6; margin: 0 0 24px; max-width: 440px; }
 
 .cta-agenda .btn-primario {
